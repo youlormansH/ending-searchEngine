@@ -9,7 +9,7 @@ const resolvers = {
                 const userData = await User.findOne({ _id: context.user._id })
                 return userData
             }
-            throw new AuthenticationError("not login")
+            throw new AuthenticationError("not logged in")
 
 
         },
