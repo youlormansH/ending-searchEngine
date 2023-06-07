@@ -13,6 +13,7 @@ const resolvers = {
 
 
         },
+      },
         Mutation: {
             addUser: async (parent, { username, email, password }) => {
                 const user = await User.create({ username, email, password });
@@ -62,10 +63,6 @@ const resolvers = {
                 }
                 throw new AuthenticationError('You need to be logged in!');
               },
-          
-          
-
         }
     }
-}
 module.exports = resolvers;
